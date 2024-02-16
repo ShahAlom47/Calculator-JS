@@ -16,7 +16,15 @@ calKey.addEventListener('click', function (event) {
 
         if (events == "=") {
 
-            string = eval(string);
+            if (string.includes('%')) {
+              
+               string= percentage(string)
+            } 
+            else {
+                string = eval(string);
+            }
+
+            // string = eval(string);
             displayBottom.innerText = string;
         }
         else if (events !== "=" && events !== "AC" && events !== "DEL") {
@@ -45,3 +53,13 @@ calKey.addEventListener('click', function (event) {
 
 
 });
+
+
+function percentage(value){
+
+    let percentageValue = value.split('%');
+    return (percentageValue[0]*percentageValue[1] )/100;
+
+}
+
+console.log( percentage("300%15"))
