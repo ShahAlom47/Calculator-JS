@@ -1,0 +1,8 @@
+.shadow-cm{
+
+    box-shadow:0px 0px 7px rgb(205, 200, 200);
+}
+.btn-outline:active{
+
+    transform: scale(1.03);
+}
